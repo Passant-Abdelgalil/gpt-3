@@ -1,0 +1,119 @@
+@use "../../variables.scss" as *;
+
+.wgpt3
+{
+    padding: 2rem 6rem;
+    &-wrapper {
+        background-color: #042C54;
+    }
+
+}
+.wgpt3__intro{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 4rem;
+    background:
+    radial-gradient(
+      circle at top left,
+      #0F4279, 
+      transparent 200px
+    );
+    h2 {
+        flex: 1;
+    }
+    p {
+        flex: 2;
+    }
+}
+.wgpt3__features{
+    display: flex;
+    flex-flow: column wrap;
+    padding: 4rem;
+    padding-top: 0;
+    background: radial-gradient(
+        circle at bottom right,
+        #1B78DE, 
+        transparent 200px
+      );
+    &-header{
+        padding-bottom: 4rem;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        &-h{
+            max-width: 470px;
+            line-height: 45px;
+            font-size: 34px;
+            font-weight: 800;
+            margin: 0;
+        }
+        &--explore{
+            color: #FF8A71;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 45px;
+            margin-left: auto;
+        }
+    }
+    &-content {
+        display: flex;
+        column-gap: 20px;
+        row-gap: 40px;
+        flex-flow: row wrap;
+        &_item {
+            flex: 1;
+            width: 100%;
+            min-width: 150px;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            h2 {
+                line-height: 75px;
+                &::before{
+                    margin-bottom: -.5rem;
+                }
+            }            
+        }
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .wgpt3__intro {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .wgpt3{
+        padding: 2rem;
+
+        &__intro {
+            padding: 2rem;
+            flex-direction: column;
+        }
+        &__features {
+            padding: 2rem;
+        }
+    }
+    .wgpt3__features{
+        &-header{
+            flex-direction: column;
+            &-h{
+                font-size: 24px;
+            }
+            &--explore{
+                font-size: 14px;
+            }
+        }
+       
+    }
+}
+@media screen and (max-width: 300px) {
+    .wgpt3 {
+        padding: 0;
+    }
+}
