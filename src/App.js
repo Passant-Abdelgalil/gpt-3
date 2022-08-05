@@ -10,6 +10,10 @@ import {
 
 import { CTA, Brand, Navbar } from "./components";
 
+import "./App.scss";
+
+
+
 const App = () => {
   return (
     <main className="App">

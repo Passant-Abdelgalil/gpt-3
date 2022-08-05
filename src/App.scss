@@ -1,0 +1,81 @@
+@use 'variables.scss' as *;
+@use 'animations.scss' as *;
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: $color-bg;
+}
+
+
+a {
+    color: unset;
+    text-decoration: none;
+}
+
+.gradient__bg {
+
+    /* ff 3.6+ */
+    background:-moz-radial-gradient(ellipse at 3% 2%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 89%);
+
+    /* safari 5.1+,chrome 10+ */
+    background:-webkit-radial-gradient(ellipse at 3% 2%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 89%);
+
+    /* opera 11.10+ */
+    background:-o-radial-gradient(ellipse at 3% 2%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 89%);
+
+    /* ie 10+ */
+    background:-ms-radial-gradient(ellipse at 3% 2%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 89%);
+
+    /* global 92%+ browsers support */
+    background:radial-gradient(ellipse at 3% 2%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 89%);
+
+}
+            
+            
+.gradient__text{
+    background: $gradient-text;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section__padding{
+    padding: 4rem 6rem;
+}
+
+.section__margin{
+    padding: 4rem 6rem;
+}
+
+
+.scale-up-center {
+	-webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+
+  /**
+ * ----------------------------------------
+ * Media Query 
+ * ----------------------------------------
+ */
+
+ @media screen and (max-width: 700px){
+    .section__padding,
+    .section__margin{
+        padding: 4rem;
+    }
+ }
+
+ @media screen and (max-width: 550px){
+    .section__padding,
+    .section__margin{
+        padding: 4rem 2rem;
+    }
+ }
