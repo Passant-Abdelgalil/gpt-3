@@ -1,13 +1,17 @@
 @use "../../variables.scss" as * ;
 
 .feature {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
 
     &__heading {
         color: white;
         font-weight: 800;
         letter-spacing: -0.04em;
         font-size: 24px;
-
+        flex: 1;
+        padding-right: 20px;
         &::before{
             content: "";
             display: block;
@@ -24,18 +28,23 @@
         line-height: 30px;
         font-size: 16px;
         font-weight: 500;
+        flex: 2.5;
     }
 }
 
 @media screen and (max-width: 550px){
     .feature {
+        flex-direction: column;
+        margin-bottom: 20px;
         &__heading {
            font-size: 20px;
            line-height: 60px;
+           margin-bottom: 10px;
         }
         &__paragraph {
             font-size: 14px;
-            line-height: 22px;
+            line-height: 24px;
+            font-weight: 500;
         }
     }    
 }
