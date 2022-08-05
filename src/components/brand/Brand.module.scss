@@ -1,0 +1,16 @@
+.sponsers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    padding-bottom: 2rem ;
+    gap: 40px;
+    &_img{
+        height: 24px;
+    }
+}
+@media screen and (max-width: 490px){
+    .sponsers_img{
+        height: 20px;
+    }
+}
