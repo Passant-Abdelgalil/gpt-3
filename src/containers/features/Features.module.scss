@@ -5,10 +5,12 @@
     justify-content: center;
     align-items: center;
 
+    margin-top: 2rem !important;
+
     &-heading{
         flex: 1;
         margin-bottom: 2rem;
-
+        margin-right: 2rem;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -36,7 +38,6 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        align-items: center;
 
         &_item {
             justify-content: space-between;
@@ -56,8 +57,12 @@
     }
 }
 @media screen and (max-width: 550px){
-    .gpt3__features-heading_h {
+    .gpt3__features-heading
+    {
+        margin-right: 0;
+        &_h {
         font-size: $h2-sm;
         line-height: 38px;         
+        }
     }
 }

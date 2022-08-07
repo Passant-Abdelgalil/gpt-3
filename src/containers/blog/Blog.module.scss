@@ -1,7 +1,7 @@
 @use "../../variables.scss" as *;
 
 .gpt3__blog {
-    margin-top: 20px;
+    margin-top: 2rem !important;
 
     &-headline {
         font-size: $h1-xl;
