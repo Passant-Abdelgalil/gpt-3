@@ -1,0 +1,115 @@
+.gpt3__footer{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+
+    background: #031B34;
+    padding: 2rem 6rem;
+    
+    &-headline {
+        font-weight: 800;
+        font-size: 3.875rem;
+        line-height: 4.5rem;
+        text-align: center;
+        letter-spacing: -0.04em;
+
+        max-width: 51rem;
+        margin-top: 10rem;
+    }
+
+    &--request {
+        font-size: 1.125rem;
+        line-height: 1.3rem;
+        word-spacing: 2px;
+
+        color: white;
+        background-color: transparent;
+
+        outline: none;
+        border: 1px solid white;
+        cursor: pointer;
+
+        padding: 1rem;
+        margin-top: 2rem;
+        margin-bottom: 10rem;
+    }
+
+    &-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        color: white;
+        width: 100%;
+    }
+
+    &-rights {
+        color: white;
+        font-size: 12px;
+        line-height: 14px;
+    }
+}
+
+.gpt3__footer-content {
+    &_company {
+        margin-bottom: 2rem;
+        grid-column: span 2;
+        &-logo {
+            width: 118px;
+            margin-bottom: 1rem;
+        }
+
+        &-desc {
+            font-size: .75rem;
+            line-height: .875rem;
+            max-width: 11rem;
+        }
+    }
+
+    &_nav-col {
+        margin-bottom: 2rem;
+        grid-column: span 2;
+        &_title {
+            font-size: .875rem;
+            line-height: 1rem;
+            font-weight: 800;
+        }
+    
+        &_links {
+            list-style: none;
+            
+            li {
+                font-size: .75rem;
+                line-height: 1.25rem;
+                
+                margin: 1rem 0;
+                // max-width: 116px;
+            }
+        }
+    
+    }
+}
+
+@media screen  and (max-width: 850px) {
+    .gpt3__footer-headline {
+        font-size: 44px;
+        line-height: 50px;
+    }
+}
+
+@media screen and (max-width: 550px){
+    .gpt3__footer-headline {
+        font-size: 34px;
+        line-height: 42px;
+    }
+    .gpt3__footer--request {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+@media screen and (max-width: 550px){
+    .gpt3__footer-headline {
+        font-size: 27px;
+        line-height: 38px;
+    }
+}
