@@ -32,6 +32,13 @@
 
     }
 }
+
+@media screen and (min-width: 1024px){
+    .gpt3__blog-articles {
+        grid-template-columns: repeat(auto-fit, minmax(calc(100%/6), 1fr));
+    }
+
+}
 @media screen and (max-width: 700px){
     .gpt3__blog-headline {
         font-size: $h1-lg;
