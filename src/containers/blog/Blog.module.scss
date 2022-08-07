@@ -1,0 +1,53 @@
+@use "../../variables.scss" as *;
+
+.gpt3__blog {
+    padding: 2rem 6rem;
+
+    &-headline {
+        font-size: 62px;
+        line-height: 75px;
+        font-weight: 800;
+        letter-spacing: -0.04em;
+    }
+    
+    &-articles {
+        margin: 4rem 0;
+        display: grid;
+        /* Create 3 columns at most each no less than 320px wide */
+        grid-template-columns: repeat(auto-fit, minmax(max(320px,calc(100%/3)), 1fr));
+    }
+    
+    &-articles_item {
+        margin: 15px;
+    
+        &:first-child {
+            grid-row: 1 / span 2;
+
+            h3 {
+                font-size: 25px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 700px){
+    .gpt3__blog-headline {
+        font-size: 46px;
+        line-height: 52px;
+    }
+}
+@media screen and (max-width: 550px) {
+    .gpt3__blog {
+        padding: 2rem;
+    
+        &-headline {
+            font-size: 34px;
+            line-height: 42px;
+        }
+        &-articles_item:first-child{
+            h3 {
+                font-size: 16px;
+            }
+        }
+    }
+    
+}
