@@ -1,78 +1,83 @@
 @use "../../variables.scss" as *;
 
-.wgpt3
-{
-    padding: 2rem 6rem;
-    &-wrapper {
-        background-color: #042C54;
-    }
-
+.wgpt3-wrapper {
+    background: 
+    radial-gradient( circle at top left,
+    #0F4279, transparent 200px),
+    radial-gradient(circle at bottom right,
+    #1B78DE, transparent 200px),
+    #042C54;
 }
+
 .wgpt3__intro{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 10px;
-    padding: 4rem;
-    background:
-    radial-gradient(
-      circle at top left,
-      #0F4279, 
-      transparent 200px
-    );
+    
     h2 {
         flex: 1;
+        margin: 10px 0;
     }
+
     p {
         flex: 2;
+        margin: 10px 0;
     }
 }
 .wgpt3__features{
     display: flex;
     flex-flow: column wrap;
-    padding: 4rem;
-    padding-top: 0;
-    background: radial-gradient(
-        circle at bottom right,
-        #1B78DE, 
-        transparent 200px
-      );
+
     &-header{
-        padding-bottom: 4rem;
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
         align-items: flex-start;
+        
+        width: 100%;
+        padding-bottom: 4rem;
+        
         &-h{
             max-width: 470px;
-            line-height: 45px;
-            font-size: 34px;
-            font-weight: 800;
             margin: 0;
+
+            font-size: $h2-md;
+            line-height: 45px;
+            font-weight: 800;
         }
+
         &--explore{
             color: #FF8A71;
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 45px;
             margin-left: auto;
+
+            font-size: $p-md;
+            font-weight: 500;
+            line-height: 45px;
         }
     }
     &-content {
         display: flex;
-        column-gap: 20px;
-        row-gap: 40px;
         flex-flow: row wrap;
+        justify-content: space-between;
+
+        width: 100%;
+
         &_item {
-            flex: 1;
-            width: 100%;
             min-width: 150px;
+            flex: 1;
+
+            margin: 20px 0;
+            margin-right: 40px;
+
             display: flex;
             justify-content: flex-start;
             flex-direction: column;
+            
+
             h2 {
                 line-height: 75px;
+            
                 &::before{
                     margin-bottom: -.5rem;
                 }
@@ -88,32 +93,26 @@
 }
 
 @media screen and (max-width: 560px) {
-    .wgpt3{
-        padding: 2rem;
-
-        &__intro {
-            padding: 2rem;
-            flex-direction: column;
-        }
-        &__features {
-            padding: 2rem;
-        }
+    .wgpt3__intro {
+        flex-direction: column;
     }
-    .wgpt3__features{
-        &-header{
-            flex-direction: column;
-            &-h{
-                font-size: 24px;
-            }
-            &--explore{
-                font-size: 14px;
-            }
+
+
+    .wgpt3__features-header{
+        flex-direction: column;
+
+        &-h {
+            font-size: $h3-sm;
         }
-       
+        
+        &--explore {
+            font-size: $p-sm;
+        }
     }
 }
-@media screen and (max-width: 300px) {
-    .wgpt3 {
-        padding: 0;
-    }
+
+@media screen and (max-width: 450px) {
+    .wgpt3__features-content_item {
+        margin-right: 0;
+    }    
 }

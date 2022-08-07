@@ -6,6 +6,7 @@
     padding: 0;
     margin: 0;
     scroll-behavior: smooth;
+    font-family: $font-family;
 }
 
 body {
@@ -17,6 +18,19 @@ a {
     color: unset;
     text-decoration: none;
 }
+
+.container {
+    width: 90%;
+    padding: 1rem;
+    margin: auto;
+}
+
+@media screen and (max-width: 350px){
+    .container {
+        width: 100%;
+    }
+}
+
 
 .gradient__bg {
 

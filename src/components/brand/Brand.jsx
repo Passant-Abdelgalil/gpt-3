@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Brand.module.scss";
+
 /* Sponsers image => should be from API */
 import google from "../../assets/google.png";
 import shopify from "../../assets/shopify.png";

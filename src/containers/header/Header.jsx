@@ -25,8 +25,7 @@ const Header = () => {
   const requestsNumber = /* should be requestingPeople.length*/ 1600;
 
   return (
-    <section className={styles["header-section"]}>
-      <div className={styles["header"]}>
+      <section id="home" className={`container ${styles["header"]}`}>
         <div className={styles["header__content"]}>
           <h1
             className={`gradient__text ${styles["header__content-headline"]}`}
@@ -51,9 +50,9 @@ const Header = () => {
               {requestingPeople.slice(0, 6).map((item) => (
                 <img src={item} alt="profile" />
               ))}
-              <p className={styles["header__content-requests_images-more"]}>
-                1.6k+
-              </p>
+              <div className={styles["header__content-requests_images-more"]}>
+                <p>1.6k+</p>
+              </div>
             </div>
             <p className={styles["header__content-requests_paragraph"]}>
               {requestsNumber.toLocaleString()} people requested access a visit
@@ -64,7 +63,6 @@ const Header = () => {
         <div className={styles["header__image"]}>
           <img src={headerImage} alt="header illustration" />
         </div>
-      </div>
     </section>
   );
 };

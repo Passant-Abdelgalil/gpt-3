@@ -5,62 +5,82 @@
     flex-flow: row wrap;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 2rem 6rem;
     
     &__image{
         display: flex;
         justify-content: center;
         align-items: center;
         flex: 1;
+
         img{
             width: 100%;
             height: 100%;
         }
     }
+
     &__content{
         flex: 1;
     }
 }
 .header__content {
+    
     &-headline {
+        font-size: $h1-xl;
         line-height: 75px;
         font-weight: 800;
         letter-spacing: -0.04em;
-        font-size: 62px;
+    
+        margin-bottom: 1rem;
     }
 
     &-paragraph {
         color: $color-text;
+    
         line-height: 27px;
-        font-size: 20px;
+        font-size: $p-lg;
         font-weight: 400;
         line-height: 1.5;
     }
     
     &-getStarted {
         display: flex;
+        flex-flow: row wrap;
+
         padding: 2rem 0;
+    
         input {
+            flex-grow: 1;
+            
             padding: 1rem;
+            margin-top: 5px;
+        
+            color: $color-text;
             background: #052D56;
+        
             border-radius: 5px 0px 0px 5px;
             border: none;
-            color: $color-text;
+        
             &::placeholder{
                 color: $color-text;
             }
-            flex: 0.7;
         }
         button {
-            flex: 0.3;
-            background-color: $color-button;
-            border: none;
-            outline: none;
-            color: white;
-            font-weight: 700;
-            font-size: 1rem;
-            border-radius: 0px 5px 5px 0px;
+            flex-grow: 0.3;
             cursor: pointer;
+
+            padding:  0.5rem;
+            margin-left: auto;
+            margin-top: 5px;
+
+            background-color: $color-button;
+            color: white;
+        
+            border: none;
+            border-radius: 0px 5px 5px 0px;
+            outline: none;
+        
+            font-weight: 700;
+            font-size: $p-md;        
         }
     }
 
@@ -68,38 +88,54 @@
 
 .header__content-requests{
     display: flex;
-    gap: 10px;
     align-items: center;
+
     &_images{
         display: flex;
         align-items: center;
+
+        margin-right: 10px;
+        margin-bottom: 10px;
+        
         img{
             width: 36px;
             height: 36px;
+        
             border-radius: 50%;
             border: 2px solid white;
+        
             &:not(:first-child){
                 margin-left: -8px;
             }
         }
         &-more{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
             width: 36px;
             height: 36px;
-            border: 2px solid white;
-            background-color: cadetblue;
-            border-radius: 50%;
-            display: inline-block;
-            text-align: center;
-            line-height: 34px;
-            font-size: 10px;
-            font-weight: 800;
-            color: white;
             margin-left: -8px;
+        
+            border-radius: 50%;
+            border: 2px solid white;
+        
+            background-color: cadetblue;
+            color: white;
+        
+            p {
+                text-align: center;
+                font-size: $p-xs;
+                font-weight: 800;
+            }
         }
     }
     &_paragraph{
         color: white;
-        font-size: 12px;
+        
+        margin-bottom: 10px;
+
+        font-size: $p-xs;
         font-weight: 500;
         line-height: 38px;
     }
@@ -113,17 +149,15 @@
     }
 }
 @media screen and (max-width: 650px){
-    .header{
-        padding: 2rem;
-    }
+
     .header__content {
         &-headline {
-            font-size: 48px;
+            font-size: $h1-lg;
             line-height: 60px;
         }
     
         &-paragraph {
-            font-size: 16px;
+            font-size: $p-md;
             line-height: 24px;
         }
         &-requests {
@@ -132,7 +166,7 @@
         &-getStarted {
             input,
             button{
-                font-size: 16px;
+                font-size: $p-md;
             }
         }
     }
@@ -141,24 +175,40 @@
 @media screen and (max-width: 490px){
     .header__content {
         &-headline {
-            font-size: 36px;
+            font-size: $h1-md;
             line-height: 48px;
         }
     
         &-paragraph {
-            font-size: 14px;
+            font-size: $p-sm;
             line-height: 24px;
         }
         &-getStarted {
             input,
             button{
-                font-size: 14px;
+                font-size: $p-sm;
             }
         }
     }
 }
-@media screen and (max-width: 350px) {
-    .header{
-        padding: 1rem;
+
+
+@media screen and (max-width: 350px){
+    .header__content {
+        &-headline {
+            font-size: $h1-xs;
+            line-height: 30px;
+        }
+    
+        &-paragraph {
+            font-size: $p-xs;
+            line-height: 20px;
+        }
+        &-getStarted {
+            input,
+            button{
+                font-size: $p-xs;
+            }
+        }
     }
 }

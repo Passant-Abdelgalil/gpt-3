@@ -18,7 +18,7 @@ const Navbar = () => {
     );
   
   return (
-    <navbar className={styles["gpt3__navbar"]}>
+    <navbar className={`container ${styles["gpt3__navbar"]}`}>
       <div className={styles["gpt3__navbar-links"]}>
         <div className={styles["gpt3__navbar-links_logo"]}>
           <img src={logo} alt="logo" />

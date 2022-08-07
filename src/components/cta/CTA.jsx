@@ -5,7 +5,7 @@ const CTA = () => {
   const getStartedHandler = (e) => {};
 
   return (
-    <section className={styles["gpt3__CTA"]}>
+    <section className={`container ${styles["gpt3__CTA"]}`}>
       
         <div className={styles["gpt3__CTA_text"]}>
           <p className={styles["gpt3__CTA_text-sm"]}>

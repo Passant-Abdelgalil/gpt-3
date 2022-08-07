@@ -43,7 +43,7 @@ const Blog = () => {
   ];
 
   return (
-    <section className={styles["gpt3__blog"]}>
+    <section className={`container ${styles["gpt3__blog"]}`}>
       <h2 className={`gradient__text ${styles["gpt3__blog-headline"]}`}>
         A lot is happening,
       </h2>

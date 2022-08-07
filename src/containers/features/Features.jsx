@@ -3,7 +3,7 @@ import { Feature } from "../../components";
 import styles from "./Features.module.scss";
 const Features = () => {
   return (
-    <section className={styles["gpt3__features"]}>
+    <section className={`container ${styles["gpt3__features"]}`}>
       <div className={styles["gpt3__features-heading"]}>
         <h2 className={`gradient__text ${styles["gpt3__features-heading_h"]}`}>
           The Future is Now and You Just Need To Realize It. Step into Future

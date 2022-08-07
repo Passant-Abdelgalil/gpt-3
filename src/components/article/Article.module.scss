@@ -1,3 +1,5 @@
+@use "../../variables.scss" as *;
+
 .article{
     display: grid;
     grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
@@ -6,7 +8,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        position: relative;
+
         img {
             width: 100%;
             max-height: 100%;
@@ -18,36 +20,39 @@
     &__content {
         display: flex;
         flex-flow: column wrap;
+
         background-color: #042C54;
+        color: white;
+
         padding: 1rem;
+
         &_date {
-            color: white;
+            font-size: $p-xs;
             font-weight: 700;
-            font-size: 11px;
             line-height: 35px;
         }
 
         &_title {
-            color: white;
-            font-weight: 800;
-            font-size: 19px;
-            line-height: 30px;
             margin-bottom: 20px;
+
+            font-size: $h3-sm;
+            font-weight: 800;
+            line-height: 30px;
         }
 
         &--more {
-            color: white;
-            font-weight: 700;
-            font-size: 11px;
-            line-height: 35px;
             margin-top: auto;
+
+            font-size: $p-xs;
+            font-weight: 700;
+            line-height: 35px;
         }
     }
 }
 
 @media screen and (max-width: 550px) {
     .article__content_title {
-        font-size: 18px;
+        font-size: $h2-xs;
         line-height: 25px;
     }
 }

@@ -5,7 +5,7 @@ import featureImage from "../../assets/Feature Image.png";
 
 const Possibility = () => {
   return (
-    <section className={styles["gpt3__possibility"]} id="possibility">
+    <section className={`container ${styles["gpt3__possibility"]}`} id="possibility">
       <div className={styles["gpt3__possibility-image"]}>
         <img src={featureImage} alt="possibility" />
       </div>

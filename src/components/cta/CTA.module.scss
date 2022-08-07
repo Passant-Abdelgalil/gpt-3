@@ -1,12 +1,11 @@
 @use "../../variables.scss" as *;
 
 .gpt3__CTA {
-    padding: 2rem;
-    margin: 4rem;
     
     border: 1px solid black;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     background: $gradient-bar;
 
     display: flex;
@@ -16,31 +15,33 @@
     
     &_text {
         &-sm {
-            font-size: 12px;
+            font-size: $p-xs;
             line-height: 30px;
             font-weight: 500;
         }
         &-lg {
-            font-size: 24px;
+            font-size: calc(1.125 * $p-md);
             line-height: 45px;
             font-weight: 800;
         }
     }
 
     &--btn{
-        width: 190px;
-        min-width: 190px;
-        
-        padding: 16px;
-        border-radius: 40px;
-        background-color: black;
-        border: none;
+        max-width: 190px;
+        display: block;
+
+        padding: 0 40px;
         margin-left: auto;
 
+        border-radius: 40px;
+        border: none;
+
+        background-color: black;
         color: white;
+
+        font-size: $p-md;
         font-weight: 700;
-        font-size: 18px;
-        line-height: 30px;
+        line-height: 50px;
     }
 }
 
@@ -48,17 +49,19 @@
 @media screen and (max-width: 650px){
     .gpt3__CTA {
         flex-direction: column;
-        margin: 4rem 2rem;
 
         &_text-sm {
             line-height: 20px;
         }
+        
         &_text-lg {
-            font-size: 18px;
+            font-size: $p-md;
             line-height: 30px;
         }
+
         &--btn{
-            margin-top: 2rem;
+            margin-top: 16px;
+            font-size: $p-sm;
         }
     }
 }

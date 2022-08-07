@@ -1,13 +1,14 @@
 import React from "react";
 import styles from "./WhatGPT3.module.scss";
+
 import { Feature } from "../../components";
 
 const WhatGPT3 = () => {
   return (
-    <section id="wgpt3" className={styles["wgpt3"]}>
+    <section id="wgpt3" className={`container ${styles["wgpt3"]}`}>
       <div className={styles["wgpt3-wrapper"]}>
         <Feature
-          className={styles["wgpt3__intro"]}
+          className={`container ${styles["wgpt3__intro"]}`}
           title="What is GPT-3"
           text="We so opinion friends me message as delight. Whole front do of plate
             heard oh ought. His defective nor convinced residence own.
@@ -15,7 +16,7 @@ const WhatGPT3 = () => {
             ladyship an insisted so humanity he. Friendly bachelor entrance to
             on by."
         />
-        <div className={styles["wgpt3__features"]}>
+        <div className={`container ${styles["wgpt3__features"]}`}>
           <div className={styles["wgpt3__features-header"]}>
             <h2
               className={`gradient__text ${styles["wgpt3__features-header-h"]}`}
