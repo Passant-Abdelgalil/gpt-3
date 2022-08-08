@@ -1,0 +1,34 @@
+@use "../../variables.scss" as *;
+
+
+.error{
+    min-height: 100vh;
+    text-align: center;
+
+    color: white;
+    background: 
+    radial-gradient( circle at top left,
+    #0F4279, transparent 200px),
+    radial-gradient(circle at bottom right,
+    #1B78DE, transparent 200px),
+    #042C54;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__title-1 {
+        font-size: $h1-xl;
+        padding: 2rem 0;
+    }
+
+    &__title-2 {
+        font-size: $h2-md;
+        padding: 1rem 0;
+    }
+
+    &__message {
+        font-weight: 800;
+    }
+}
