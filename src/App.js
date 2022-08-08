@@ -1,9 +1,17 @@
-import React, { Suspense, useState } from "react";
-import { Footer, Blog, Possibility, Features } from "./containers";
-
-import { CTA, Navbar } from "./components";
-
+import React, { lazy, Suspense, useState } from "react";
 import "./App.scss";
+import { Header, NotImplemented } from "./containers";
+import { Navbar } from "./components";
+const BrandComponent = lazy(() => import("./components/brand/Brand"));
+
+const WhatGPT3Component = lazy(() => import("./containers/whatGPT3/WhatGPT3"));
+const FeaturesComponent = lazy(() => import("./containers/features/Features"));
+const PossibilityComponent = lazy(() =>
+  import("./containers/possibility/Possibility")
+);
+const FooterComponent = lazy(() => import("./containers/footer/Footer"));
+const BlogComponent = lazy(() => import("./containers/blog/Blog"));
+const CTAComponent = lazy(() => import("./components/cta/CTA"));
 
 const App = () => {
   const [showOverlay, setShowOverlay] = useState(false);
@@ -17,34 +25,25 @@ const App = () => {
     setShowOverlay(false);
   };
 
-  const BrandComponent = React.lazy(() => import("./components/brand/Brand"));
-  const NotImplementedComponent = React.lazy(() =>
-    import("./containers/notImplemented/NotImplemented")
-  );
-  const WhatGPT3Component = React.lazy(() =>
-    import("./containers/whatGPT3/WhatGPT3")
-  );
-  const HeaderComponent = React.lazy(() =>
-    import("./containers/header/Header")
-  );
-
   return (
     <main className="App">
-      <Suspense fallback={<div style={{ color: "white" }}>Loading...</div>}>
-        {showOverlay && (
-          <NotImplementedComponent hideOverlay={hideOverlayHandler} />
-        )}
-        <div className="gradient__bg">
-          <Navbar showOverlay={showOverlayHandler} />
-          <HeaderComponent showOverlay={showOverlayHandler} />
-        </div>
+      {showOverlay && <NotImplemented hideOverlay={hideOverlayHandler} />}
+      <div className="gradient__bg">
+        <Navbar showOverlay={showOverlayHandler} />
+        <Header showOverlay={showOverlayHandler} />
+      </div>
+      <Suspense
+        fallback={
+          <div style={{ color: "white", fontWeight: "bold" }}>Loading...</div>
+        }
+      >
         <BrandComponent />
         <WhatGPT3Component />
-        <Features />
-        <Possibility />
-        <CTA showOverlay={showOverlayHandler} />
-        <Blog showOverlay={showOverlayHandler} />
-        <Footer showOverlay={showOverlayHandler} />
+        <FeaturesComponent />
+        <PossibilityComponent />
+        <CTAComponent showOverlay={showOverlayHandler} />
+        <BlogComponent showOverlay={showOverlayHandler} />
+        <FooterComponent showOverlay={showOverlayHandler} />
       </Suspense>
     </main>
   );
