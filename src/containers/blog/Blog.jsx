@@ -8,7 +8,7 @@ import img3 from "../../assets/Rectangle 22-2.png";
 import img4 from "../../assets/Rectangle 22-3.png";
 import img5 from "../../assets/Rectangle 22-4.png";
 
-const Blog = () => {
+const Blog = (props) => {
   const articles = [
     {
       img: img1,
@@ -51,13 +51,15 @@ const Blog = () => {
         We are blogging about it.
       </h2>
       <div className={styles["gpt3__blog-articles"]}>
-        {articles.map((article) => (
+        {articles.map((article, idx) => (
           <Article
+            key={`article-${idx}`}
             className={styles["gpt3__blog-articles_item"]}
             img={article.img}
             title={article.title}
             date={article.data}
             link={article.link}
+            showOverlay={props.showOverlay}
           />
         ))}
       </div>

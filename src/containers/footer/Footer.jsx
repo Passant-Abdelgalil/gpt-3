@@ -3,8 +3,16 @@ import styles from "./Footer.module.scss";
 
 import logo from "../../assets/logo.svg";
 
-const Footer = () => {
-  const requestEarlyHandler = (e) => {};
+const Footer = (props) => {
+  const requestEarlyHandler = (e) => {
+    e.preventDefault();
+    props.showOverlay();
+  };
+
+  const handleClick =(e)=>{
+    e.preventDefault();
+    props.showOverlay();
+  }
   return (
     <footer className={styles["gpt3__footer-wrapper"]}>
       <div className={`container ${styles["gpt3__footer"]}`}>
@@ -34,16 +42,16 @@ const Footer = () => {
             </p>
             <ul className={styles["gpt3__footer-content_nav-col_links"]}>
               <li>
-                <a href="/">Overons</a>
+                <a onClick={handleClick} href="/">Overons</a>
               </li>
               <li>
-                <a href="/">Social Media</a>
+                <a onClick={handleClick} href="/">Social Media</a>
               </li>
               <li>
-                <a href="/">Counters</a>
+                <a onClick={handleClick} href="/">Counters</a>
               </li>
               <li>
-                <a href="/">Contact</a>
+                <a onClick={handleClick} href="/">Contact</a>
               </li>
             </ul>
           </div>
@@ -53,13 +61,13 @@ const Footer = () => {
             </p>
             <ul className={styles["gpt3__footer-content_nav-col_links"]}>
               <li>
-                <a href="/">Terms & Conditions</a>
+                <a onClick={handleClick} href="/">Terms & Conditions</a>
               </li>
               <li>
-                <a href="/">Privacy Policy</a>
+                <a onClick={handleClick} href="/">Privacy Policy</a>
               </li>
               <li>
-                <a href="/">Contact</a>
+                <a onClick={handleClick} href="/">Contact</a>
               </li>
             </ul>
           </div>

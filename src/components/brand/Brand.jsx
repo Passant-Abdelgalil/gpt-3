@@ -20,6 +20,7 @@ const Brand = () => {
     <div className={styles["sponsers"]}>
       {sponsers.map((sponser) => (
         <img
+          key={sponser.title}
           className={styles["sponsers_img"]}
           src={sponser.img}
           alt={sponser.title}

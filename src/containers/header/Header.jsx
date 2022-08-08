@@ -5,9 +5,10 @@ import headerImage from "../../assets/Header Illustration.png";
 
 import defaultProfile from "../../assets/profile.jpg";
 
-const Header = () => {
+const Header = (props) => {
   const submitFormHandler = (e) => {
     e.preventDefault();
+    props.showOverlay();
   };
 
   const requestingPeople = /* should be from API*/ [
@@ -47,8 +48,8 @@ const Header = () => {
           </form>
           <div className={styles["header__content-requests"]}>
             <div className={styles["header__content-requests_images"]}>
-              {requestingPeople.slice(0, 6).map((item) => (
-                <img src={item} alt="profile" />
+              {requestingPeople.slice(0, 6).map((item, idx) => (
+                <img key={`people-${idx+1}`} src={item} alt="profile" />
               ))}
               <div className={styles["header__content-requests_images-more"]}>
                 <p>1.6k+</p>

@@ -1,0 +1,76 @@
+@use "../../variables.scss" as *;
+
+
+.overlay{
+    position: fixed;
+    z-index: 100;
+    
+    width: 100vw;
+    height: 100vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.not-implemented{
+    color: white;
+
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+
+    &__title {
+        font-size: $h1-lg;
+        line-height: 80px;
+
+        margin-bottom: 2rem;
+    }
+
+
+    &__message {
+        font-size: $p-xl;
+    }
+
+
+    &__img {
+        max-width: 100%;
+        width: 400px;
+
+        margin-top: 2rem;
+
+        filter: drop-shadow(0px 0px 20px white);
+    }
+}
+
+@media screen and (max-width: 550px){
+    .not-implemented__title{
+        font-size: $h1-md;
+        line-height: 50px;
+    }
+    .not-implemented__message{
+        font-size: $p-md;
+    }
+}
+
+
+@media screen and (max-width: 350px){
+    .not-implemented__title{
+        font-size: $h1-xs;
+        line-height: 30px;
+
+        margin-bottom: 1rem;
+    }
+    .not-implemented__message{
+        font-size: $p-xs;
+    }
+    .not-implemented__img{
+        margin-top: 1rem;
+        width: 150px;
+    }
+}

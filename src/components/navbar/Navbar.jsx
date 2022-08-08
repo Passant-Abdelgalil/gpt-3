@@ -4,7 +4,7 @@ import styles from "./Navbar.module.scss";
 import logo from "../../assets/logo.svg";
 
 
-const Navbar = () => {
+const Navbar = (props) => {
   const [toggleMenu, setToggleMenu] = useState(false);
 
   const Menu = () => (
@@ -27,8 +27,8 @@ const Navbar = () => {
           <Menu/>
         </div>
         <div className={styles['gpt3__navbar-sign']}>
-          <p className={styles['gpt3__navbar-sign_in']}>Sign in</p>
-          <button type="button" className={styles['gpt3__navbar-sign_up']}>Sign up</button>
+          <p onClick={props.showOverlay} className={styles['gpt3__navbar-sign_in']}>Sign in</p>
+          <button type="button" onClick={props.showOverlay} className={styles['gpt3__navbar-sign_up']}>Sign up</button>
         </div>
         <div className={styles['gpt3__navbar-menu']}>
         {toggleMenu 

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styles from "./ErrorBoundary.module.scss";
+import errorImage from "../../assets/error.png";
 
 class ErrorBoundary extends Component {
   constructor(props) {
@@ -13,11 +14,14 @@ class ErrorBoundary extends Component {
     if (this.state.hasError)
       return (
         <div className={`container ${styles["error"]}`}>
-          <h1 className={`gradient__text ${styles["error__title-1"]}`}>Congratulations!</h1>
+          <h1 className={`gradient__text ${styles["error__title-1"]}`}>
+            Congratulations!
+          </h1>
           <h2 className={styles["error__title-2"]}>You've just found a bug</h2>
           <p className={styles["error__message"]}>
             I'll be grateful to you if you report it
           </p>
+          <img src={errorImage} alt="error" className={styles['error__img']}/>
         </div>
       );
 
