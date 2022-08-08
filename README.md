@@ -19,6 +19,9 @@
 - [Animista](https://animista.net/play/basic/shadow-inset/shadow-inset-bottom) to generate css animations.
 - [Webp tool](https://developers.google.com/speed/webp) to convert images to webp format
 
+## Screenshot
+
+![Localhost - Full - FUJITSU Display E24-9 TOUCH - 2022-8-8 at 9 14 17 PM](https://user-images.githubusercontent.com/69261710/183517100-5480ca27-4d87-4d2c-b826-e63804b44e73.jpg)
 
 ## Project structure
 ```
