@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 
 import styles from "./NotImplemented.module.scss";
 
-import notImplementedImage from "../../assets/not-implemented.png";
+import notImplementedImage from "../../assets/not-implemented.webp";
 
 const NotImplemented = (props) => {
   return (

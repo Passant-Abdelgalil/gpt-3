@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styles from "./ErrorBoundary.module.scss";
-import errorImage from "../../assets/error.png";
+import errorImage from "../../assets/error.webp";
 
 class ErrorBoundary extends Component {
   constructor(props) {

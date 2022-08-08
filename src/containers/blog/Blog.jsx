@@ -2,11 +2,11 @@ import React from "react";
 import styles from "./Blog.module.scss";
 import { Article } from "../../components";
 
-import img1 from "../../assets/Rectangle 22.png";
-import img2 from "../../assets/Rectangle 22-1.png";
-import img3 from "../../assets/Rectangle 22-2.png";
-import img4 from "../../assets/Rectangle 22-3.png";
-import img5 from "../../assets/Rectangle 22-4.png";
+import img1 from "../../assets/Rectangle22.webp";
+import img2 from "../../assets/Rectangle22-1.webp";
+import img3 from "../../assets/Rectangle22-2.webp";
+import img4 from "../../assets/Rectangle22-3.webp";
+import img5 from "../../assets/Rectangle22-4.webp";
 
 const Blog = (props) => {
   const articles = [

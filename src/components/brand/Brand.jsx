@@ -2,11 +2,11 @@ import React from "react";
 import styles from "./Brand.module.scss";
 
 /* Sponsers image => should be from API */
-import google from "../../assets/google.png";
-import shopify from "../../assets/shopify.png";
-import atlassian from "../../assets/atlassian.png";
-import dropbox from "../../assets/dropbox.png";
-import slack from "../../assets/slack.png";
+import google from "../../assets/google.webp";
+import shopify from "../../assets/shopify.webp";
+import atlassian from "../../assets/atlassian.webp";
+import dropbox from "../../assets/dropbox.webp";
+import slack from "../../assets/slack.webp";
 
 const Brand = () => {
   const sponsers = /* should be from API */ [

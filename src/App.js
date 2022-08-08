@@ -1,15 +1,7 @@
-import React, { useState } from "react";
-import {
-  Footer,
-  Blog,
-  Possibility,
-  Features,
-  WhatGPT3,
-  Header,
-  NotImplemented,
-} from "./containers";
+import React, { Suspense, useState } from "react";
+import { Footer, Blog, Possibility, Features } from "./containers";
 
-import { CTA, Brand, Navbar } from "./components";
+import { CTA, Navbar } from "./components";
 
 import "./App.scss";
 
@@ -25,20 +17,35 @@ const App = () => {
     setShowOverlay(false);
   };
 
+  const BrandComponent = React.lazy(() => import("./components/brand/Brand"));
+  const NotImplementedComponent = React.lazy(() =>
+    import("./containers/notImplemented/NotImplemented")
+  );
+  const WhatGPT3Component = React.lazy(() =>
+    import("./containers/whatGPT3/WhatGPT3")
+  );
+  const HeaderComponent = React.lazy(() =>
+    import("./containers/header/Header")
+  );
+
   return (
     <main className="App">
-      {showOverlay && <NotImplemented hideOverlay={hideOverlayHandler} />}
-      <div className="gradient__bg">
-        <Navbar showOverlay={showOverlayHandler} />
-        <Header showOverlay={showOverlayHandler} />
-      </div>
-      <Brand />
-      <WhatGPT3 />
-      <Features />
-      <Possibility />
-      <CTA showOverlay={showOverlayHandler} />
-      <Blog showOverlay={showOverlayHandler} />
-      <Footer showOverlay={showOverlayHandler} />
+      <Suspense fallback={<div style={{ color: "white" }}>Loading...</div>}>
+        {showOverlay && (
+          <NotImplementedComponent hideOverlay={hideOverlayHandler} />
+        )}
+        <div className="gradient__bg">
+          <Navbar showOverlay={showOverlayHandler} />
+          <HeaderComponent showOverlay={showOverlayHandler} />
+        </div>
+        <BrandComponent />
+        <WhatGPT3Component />
+        <Features />
+        <Possibility />
+        <CTA showOverlay={showOverlayHandler} />
+        <Blog showOverlay={showOverlayHandler} />
+        <Footer showOverlay={showOverlayHandler} />
+      </Suspense>
     </main>
   );
 };

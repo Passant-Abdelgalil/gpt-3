@@ -1,13 +1,13 @@
 import React from "react";
 import styles from "./Possibility.module.scss";
 
-import featureImage from "../../assets/Feature Image.png";
+import featureImageWebp from "../../assets/FeatureImage.webp";
 
 const Possibility = () => {
   return (
     <section className={`container ${styles["gpt3__possibility"]}`} id="possibility">
       <div className={styles["gpt3__possibility-image"]}>
-        <img src={featureImage} alt="possibility" />
+        <img src={featureImageWebp} alt="possibility" />
       </div>
       <div className={styles["gpt3__possibility-content"]}>
         <p className={styles["gpt3__possibility-content_requestEarly"]}>
