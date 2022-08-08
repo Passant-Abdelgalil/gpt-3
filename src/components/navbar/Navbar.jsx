@@ -18,7 +18,7 @@ const Navbar = (props) => {
     );
   
   return (
-    <navbar className={`container ${styles["gpt3__navbar"]}`}>
+    <div className={`container ${styles["gpt3__navbar"]}`}>
       <div className={styles["gpt3__navbar-links"]}>
         <div className={styles["gpt3__navbar-links_logo"]}>
           <img src={logo} alt="logo" />
@@ -48,7 +48,7 @@ const Navbar = (props) => {
         )}
         </div>
       </div>
-    </navbar>
+    </div>
   );
 };
 
