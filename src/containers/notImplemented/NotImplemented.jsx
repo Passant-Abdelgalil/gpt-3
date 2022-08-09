@@ -1,5 +1,5 @@
-import React, { Fragment } from "react";
-import ReactDOM from "react-dom";
+import React from "react";
+import { createPortal } from "react-dom";
 
 import styles from "./NotImplemented.module.scss";
 
@@ -7,8 +7,8 @@ import notImplementedImage from "../../assets/not-implemented.webp";
 
 const NotImplemented = (props) => {
   return (
-    <Fragment>
-      {ReactDOM.createPortal(
+    <React.Fragment>
+      {createPortal(
         <div
           className={styles["overlay"]}
           onClick={props.hideOverlay}
@@ -35,7 +35,7 @@ const NotImplemented = (props) => {
         </div>,
         document.getElementById("overlays")
       )}
-    </Fragment>
+    </React.Fragment>
   );
 };
 

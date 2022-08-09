@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./Possibility.module.scss";
 
 import featureImageWebp from "../../assets/FeatureImage.webp";

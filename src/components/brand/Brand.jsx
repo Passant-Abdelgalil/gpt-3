@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./Brand.module.scss";
 
 /* Sponsers image => should be from API */

@@ -1,20 +1,20 @@
-import React, { lazy, Suspense, useState } from "react";
+import React from "react";
 import "./App.scss";
 import { Header, NotImplemented } from "./containers";
 import { Navbar } from "./components";
-const BrandComponent = lazy(() => import("./components/brand/Brand"));
+const BrandComponent = React.lazy(() => import("./components/brand/Brand"));
 
-const WhatGPT3Component = lazy(() => import("./containers/whatGPT3/WhatGPT3"));
-const FeaturesComponent = lazy(() => import("./containers/features/Features"));
-const PossibilityComponent = lazy(() =>
+const WhatGPT3Component = React.lazy(() => import("./containers/whatGPT3/WhatGPT3"));
+const FeaturesComponent = React.lazy(() => import("./containers/features/Features"));
+const PossibilityComponent = React.lazy(() =>
   import("./containers/possibility/Possibility")
 );
-const FooterComponent = lazy(() => import("./containers/footer/Footer"));
-const BlogComponent = lazy(() => import("./containers/blog/Blog"));
-const CTAComponent = lazy(() => import("./components/cta/CTA"));
+const FooterComponent = React.lazy(() => import("./containers/footer/Footer"));
+const BlogComponent = React.lazy(() => import("./containers/blog/Blog"));
+const CTAComponent = React.lazy(() => import("./components/cta/CTA"));
 
 const App = () => {
-  const [showOverlay, setShowOverlay] = useState(false);
+  const [showOverlay, setShowOverlay] = React.useState(false);
 
   const showOverlayHandler = () => {
     document.body.classList.add("no-scroll");
@@ -32,7 +32,7 @@ const App = () => {
         <Navbar showOverlay={showOverlayHandler} />
         <Header showOverlay={showOverlayHandler} />
       </div>
-      <Suspense
+      <React.Suspense
         fallback={
           <div style={{ color: "white", fontWeight: "bold" }}>Loading...</div>
         }
@@ -44,7 +44,7 @@ const App = () => {
         <CTAComponent showOverlay={showOverlayHandler} />
         <BlogComponent showOverlay={showOverlayHandler} />
         <FooterComponent showOverlay={showOverlayHandler} />
-      </Suspense>
+      </React.Suspense>
     </main>
   );
 };

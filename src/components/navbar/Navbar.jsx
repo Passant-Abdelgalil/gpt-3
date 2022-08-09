@@ -1,20 +1,20 @@
-import React, {Fragment, useState} from "react";
+import React from "react";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 import styles from "./Navbar.module.scss";
 import logo from "../../assets/logo.svg";
 
 
 const Navbar = (props) => {
-  const [toggleMenu, setToggleMenu] = useState(false);
+  const [toggleMenu, setToggleMenu] = React.useState(false);
 
   const Menu = () => (
-    <Fragment>
+    <React.Fragment>
           <p><a href="#home">Home</a></p>
           <p><a href="#wgpt3">What is GPT3?</a></p>
           <p><a href="#possibility">Open AI</a></p>
           <p><a href="#features">Case Studies</a></p>
           <p><a href="#blog">Library</a></p>
-    </Fragment>
+    </React.Fragment>
     );
   
   return (

@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./Blog.module.scss";
 import { Article } from "../../components";
 
